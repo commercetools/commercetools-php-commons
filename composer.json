@@ -1,0 +1,33 @@
+{
+  "name": "commercetools/commons",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jens Schulze",
+      "email": "jens.schulze@commercetools.de"
+    }
+  ],
+  "require": {
+    "commercetools/php-sdk": "*"
+  },
+  "homepage": "https://github.com/sphereio/commercetools-php-commons",
+  "support": {
+    "email": "support@sphere.io",
+    "forum": "http://support.sphere.io",
+    "issues": "https://github.com/sphereio/commercetools-php-commons/issues",
+    "docs": "http://sphereio.github.io/commercetools-php-commons/docs/master/"
+  },
+  "autoload": {
+    "psr-4": {
+      "Commercetools\\Commons\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Commercetools\\Commons\\": [
+        "tests/unit/",
+        "tests/integration/"
+      ]
+    }
+  }
+}
