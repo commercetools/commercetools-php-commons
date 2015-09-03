@@ -16,7 +16,7 @@ class QueryHelper
     public function getAll(Client $client, QueryAllRequestInterface $request)
     {
         $lastId = null;
-        $data = [];
+        $data = ['results' => []];
         do {
             $request->sort('id')->limit(static::DEFAULT_PAGE_SIZE)->withTotal(false);
             if ($lastId != null) {
@@ -27,7 +27,7 @@ class QueryHelper
                 break;
             }
             $results = $response->toArray()['results'];
-            $data = array_merge($data, $results);
+            $data['results'] = array_merge($data['results'], $results);
             $lastId = end($results)['id'];
         } while (count($results) >= static::DEFAULT_PAGE_SIZE);
 
