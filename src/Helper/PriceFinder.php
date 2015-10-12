@@ -78,14 +78,24 @@ class PriceFinder
         return null;
     }
 
-    public function findPriceFor($prices, $currency, $country, $customerGroup, $channel)
-    {
+    /**
+     * @param $prices
+     * @param $currency
+     * @param string $country
+     * @param CustomerGroupReference $customerGroup
+     * @param ChannelReference $channel
+     * @return Price|null
+     */
+    public static function findPriceFor(
+        $prices,
+        $currency,
+        $country = null,
+        CustomerGroupReference $customerGroup = null,
+        ChannelReference $channel = null
+    ) {
+        $priceFinder = new static($currency, $country, $customerGroup, $channel);
 
-    }
-
-    public function findCurrentPrice($prices, $date)
-    {
-
+        return $priceFinder->findPrice($prices);
     }
 
     private function priceHasCurrency(Price $price, $currency)

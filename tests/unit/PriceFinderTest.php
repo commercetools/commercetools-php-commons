@@ -345,13 +345,13 @@ class PriceFinderTest extends \PHPUnit_Framework_TestCase
      */
     public function testPriceFinder($currency, $country, $customerGroup, $channel, $result)
     {
-        $priceFinder = new PriceFinder(
+        $price = PriceFinder::findPriceFor(
+            $this->getPrices(),
             $currency,
             $country,
             is_null($customerGroup) ? null :CustomerGroupReference::ofId($customerGroup),
             is_null($channel) ? null :ChannelReference::ofId($channel)
         );
-        $price = $priceFinder->findPrice($this->getPrices());
 
         $this->assertSame($result, $price->getValue()->getCentAmount());
     }
