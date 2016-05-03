@@ -8,10 +8,9 @@
     }
   ],
   "require": {
-    "commercetools/php-sdk": "*"
+    "commercetools/php-sdk": "^1.0"
   },
   "require-dev": {
-    "commercetools/php-sdk": "^1.0@dev",
     "phpunit/phpunit": "^4.8"
   },
   "homepage": "https://github.com/sphereio/commercetools-php-commons",
