@@ -13,12 +13,12 @@
   "require-dev": {
     "phpunit/phpunit": "^4.8"
   },
-  "homepage": "https://github.com/sphereio/commercetools-php-commons",
+  "homepage": "https://github.com/commercetools/commercetools-php-commons",
   "support": {
     "email": "support@sphere.io",
     "forum": "http://support.sphere.io",
-    "issues": "https://github.com/sphereio/commercetools-php-commons/issues",
-    "docs": "http://sphereio.github.io/commercetools-php-commons/docs/master/"
+    "issues": "https://github.com/commercetools/commercetools-php-commons/issues",
+    "docs": "http://commercetools.github.io/commercetools-php-commons/docs/master/"
   },
   "autoload": {
     "psr-4": {
